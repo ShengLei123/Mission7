@@ -6,24 +6,7 @@
 
 @foreach (Book b in Model.Books)
 {
-<div class="card card-outline-primary m-1 p-1">
-    <div class="bg-faded p-1">
-        <h4>
-            @b.Title
-            <span class="badge badge-pill badge-primary" style="float:right">
-                <small>@b.Price.ToString("c")</small>
-            </span>
-        </h4>
-    </div>
-    <div class="card-text p-1">Book Id: @b.BookId</div>
-    <div class="card-text p-1">Author: @b.Author</div>
-    <div class="card-text p-1">Publisher: @b.Publisher</div>
-    <div class="card-text p-1">Isbn: @b.Isbn</div>
-    <div class="card-text p-1">Classification: @b.Classification</div>
-    <div class="card-text p-1">Category: @b.Category</div>
-    <div class="card-text p-1">Page Count: @b.PageCount</div>
-
-</div>
+    <partial name="BookSummary" model="b"/>
 
 }
 
