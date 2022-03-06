@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Mission7</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
@@ -26,10 +26,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+
+                </div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
                 </div>
             </div>
+
         </nav>
     </header>
+    
     <div class="row m-1 p-1">
         <div class="col-3">
             <vc:types></vc:types>
@@ -39,7 +45,7 @@
                 @RenderBody()
             </main>
         </div>
-        
+
     </div>
 
     <footer class="border-top footer text-muted">
