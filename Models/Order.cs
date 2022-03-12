@@ -27,7 +27,8 @@ namespace Mission7.Models
         [Required(ErrorMessage = "Please enter a contry")]
         public string Country { get; set; }
         public bool Anounymous { get; set; }
-
+        [BindNever]
+        public bool OrderReceived { get; set; }
     }
 
 

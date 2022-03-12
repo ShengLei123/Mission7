@@ -14,9 +14,9 @@ namespace Mission7.Models
         {
             context = temp;
         }
-        public IQueryable<Order> Orders => context.Orders.Include(x => x.Lines).ThenInclude(x => x.Book);
+        // public IQueryable<Order> Orders => context.Orders.Include(x => x.Lines).ThenInclude(x => x.Book);
 
-        IQueryable<Order> IOrderRepository.Orders { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IQueryable<Order> Orders { get => context.Orders.Include(x => x.Lines).ThenInclude(x => x.Book); set => context.Orders.Include(x => x.Lines).ThenInclude(x => x.Book); }
 
         public void SaveOrders(Order order)
         {
