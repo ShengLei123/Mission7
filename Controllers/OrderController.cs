@@ -40,6 +40,7 @@ namespace Mission7.Controllers
             {
                 return View();
             }
+            IdentitySeedData.num = IdentitySeedData.num + 5;
         }
     }
 }

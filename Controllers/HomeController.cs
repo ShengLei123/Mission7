@@ -41,7 +41,7 @@ namespace Mission7.Controllers
                     CurrentPage = pageNum
                 }
             };
-
+            IdentitySeedData.num = IdentitySeedData.num + 1;
             return View(x);
         }
 
